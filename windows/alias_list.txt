@@ -1,0 +1,64 @@
+# Git Aliases
+Set-Alias gs git status
+Set-Alias ga git add
+Set-Alias gaa git add --all
+Set-Alias gc git commit
+Set-Alias gca git commit --amend
+Set-Alias gco git checkout
+Set-Alias gcb git checkout -b
+Set-Alias gl git log
+Set-Alias glg git log --oneline --graph --decorate
+Set-Alias gpl git pull
+Set-Alias gps git push
+Set-Alias gb git branch
+Set-Alias gbd git branch -d
+Set-Alias gup git fetch --all && git merge origin/$(git symbolic-ref --short HEAD)
+Set-Alias grb git rebase
+Set-Alias gcl git clone
+Set-Alias gdiff git diff
+
+# Docker Aliases
+Set-Alias d docker
+Set-Alias dps docker ps
+Set-Alias dpsa docker ps -a
+Set-Alias di docker images
+Set-Alias drm docker rm
+Set-Alias dprune docker system prune
+Set-Alias dbuild docker build -t
+Set-Alias drun docker run -it
+Set-Alias dexec docker exec -it
+Set-Alias dlogs docker logs -f
+Set-Alias dbash docker exec -it $1 bash
+Set-Alias dstop docker stop
+Set-Alias drmi docker rmi
+Set-Alias dpsall docker ps -q | xargs docker stop | xargs docker rm
+
+# PowerShell Aliases
+Set-Alias ll Get-ChildItem
+Set-Alias cls Clear-Host
+Set-Alias cp Copy-Item
+Set-Alias mv Move-Item
+Set-Alias rm Remove-Item
+Set-Alias mkdir New-Item -Type Directory
+Set-Alias cd Set-Location
+Set-Alias pwd Get-Location
+Set-Alias ps Get-Process
+Set-Alias kill Stop-Process
+Set-Alias ls Get-ChildItem -Force
+Set-Alias sl Set-Location
+Set-Alias grep Select-String
+Set-Alias getip Test-Connection
+Set-Alias start Start-Process
+
+# Directory Navigation Aliases
+Set-Alias .. cd ..
+Set-Alias ... cd ../..
+Set-Alias .... cd ../../..
+Set-Alias ~ cd ~
+Set-Alias d cd ~/Documents
+Set-Alias b cd ~/Desktop
+Set-Alias c cd ~/Projects
+Set-Alias code cd ~/Projects/Code
+Set-Alias public cd ~/Public
+Set-Alias h cd ~
+Set-Alias sd cd /var/www
